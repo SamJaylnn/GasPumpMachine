@@ -1,8 +1,7 @@
 import greenfoot.*;  
 
 /**
- * Ask customers if they want their receipt after:
- * Car Wash option is "No".
+ * If Car Wash option is "No", Ask customers if they want their receipt.
  *
  */
 
@@ -12,9 +11,14 @@ public class ReceiptOptionState extends State
     final String YES_OPTION = "Yes";
     final String NO_OPTION = "No";
     
+    /**
+     * Constructor 
+     */
     public ReceiptOptionState() 
     {
     }
+    
+    
 }
 
 

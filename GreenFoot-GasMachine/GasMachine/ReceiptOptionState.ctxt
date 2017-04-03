@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=ReceiptOptionState
-comment0.text=\n\ Ask\ customers\ if\ they\ want\ their\ receipt\ after\:\n\ Car\ Wash\ option\ is\ "No".\n\n
+comment0.text=\n\ If\ Car\ Wash\ option\ is\ "No",\ Ask\ customers\ if\ they\ want\ their\ receipt.\n\n
 comment1.params=
 comment1.target=ReceiptOptionState()
+comment1.text=\n\ Constructor\ \n
 numComments=2

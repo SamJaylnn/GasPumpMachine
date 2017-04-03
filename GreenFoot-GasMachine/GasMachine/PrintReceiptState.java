@@ -9,20 +9,31 @@ import greenfoot.*;
 
 public class PrintReceiptState extends State 
 {
-	final String costMsg = "Your total cost is: ";
-	//The machine prints out a message “Thank You” after printing the receipt or after a timeout of 30 seconds.
-	final String thankyouMsg = "Thank you!";
+	final private String costMsg = "Your total cost is: ";
+	final private String thankyouMsg = "Thank you!";
 
 	int cost = 0;
 
+	/**
+     * Constructor 
+     * 
+     * @param cost   total cost on the receipt
+     */
 	public PrintReceiptState(int cost) 
 	{
 		this.cost = cost;
 	}
 
+	/**
+     * Print out the receipt. 
+     * 
+     */
 	public void print() 
 	{
 		System.out.println(costMsg + cost);
+		
+		//The machine prints out a message “Thank You” after printing the receipt or after a timeout of 30 seconds.
+		Greenfoot.delay(30);
 		System.out.println(thankyouMsg);
 	}
 }

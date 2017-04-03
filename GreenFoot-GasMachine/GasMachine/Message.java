@@ -8,8 +8,10 @@ import greenfoot.*;
 public class Message extends Actor  
 {
     private GreenfootImage image;
-    private int textLoc_x = 5;     //default text location x_coordinate
-    private int textLoc_y = 25;    //default text location y_coordinate
+    //default text location x_coordinate: TO BE changed to receipt printer (the credit card reader) location
+    private int textLoc_x = 5;     
+    //default text location y_coordinate: TO BE changed to receipt printer (the credit card reader) location
+    private int textLoc_y = 25;    
 
     /**
      * Constructor for objects of class Message
@@ -23,8 +25,8 @@ public class Message extends Actor
     /**
      * Constructor for objects of class Message with text locations specified.
      * 
-     * Another object can call this constructor with its own location, so that the
-     * message would appear in the appropriate location.
+     * i.e., given the location of receipt printer (the credit card reader), the receipt would 
+     * appear in the appropriate location.
      */
     public Message(int textLoc_x, int textLoc_y)
     {
