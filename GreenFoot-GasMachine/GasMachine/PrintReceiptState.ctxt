@@ -1,4 +1,8 @@
 #BlueJ class context
 comment0.target=PrintReceiptState
-comment0.text=\n\ PrintReceiptState\ is\ to\ print\ the\ receipt\ if\:\n\ Car\ Wash\ option\ is\ "Yes"\ or\n\ Car\ Wash\ option\ is\ "No"\ and\ Print\ Receipt\ option\ is\ "Yes".\n\n\n
-numComments=1
+comment0.text=\n\ PrintReceiptState\ is\ to\ print\ the\ receipt\ if\:\n\ Car\ Wash\ option\ is\ "Yes"\ or\n\ Car\ Wash\ option\ is\ "No"\ and\ Print\ Receipt\ option\ is\ "Yes".\n\n
+comment1.params=cost
+comment1.target=PrintReceiptState(int)
+comment2.params=
+comment2.target=void\ print()
+numComments=3

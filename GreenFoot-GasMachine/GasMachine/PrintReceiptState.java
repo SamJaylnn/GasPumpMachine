@@ -1,3 +1,5 @@
+import greenfoot.*;  
+
 /**
  * PrintReceiptState is to print the receipt if:
  * Car Wash option is "Yes" or
@@ -5,17 +7,20 @@
  *
  */
 
-public class PrintReceiptState {
+public class PrintReceiptState extends State 
+{
 	final String costMsg = "Your total cost is: ";
 	final String thankyouMsg = "Thank you!";
 
 	int cost = 0;
 
-	public PrintReceiptState(int cost) {
+	public PrintReceiptState(int cost) 
+	{
 		this.cost = cost;
 	}
 
-	public void print() {
+	public void print() 
+	{
 		System.out.println(costMsg + cost);
 		System.out.println(thankyouMsg);
 	}
