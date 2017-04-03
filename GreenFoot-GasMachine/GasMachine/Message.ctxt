@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Message
+comment0.text=\n\ Write\ a\ description\ of\ class\ Message\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Message()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Message\n
+comment2.params=textLoc_x\ textLoc_y
+comment2.target=Message(int,\ int)
+comment2.text=\n\ Constructor\ for\ objects\ of\ class\ Message\ with\ text\ locations\ specified.\n\ \n\ Another\ object\ can\ call\ this\ constructor\ with\ its\ own\ location,\ so\ that\ the\n\ message\ would\ appear\ in\ the\ appropriate\ location.\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ When\ the\ message\ object\ is\ clicked,\ it'll\ disappear.\n\ \n
+comment4.params=msg
+comment4.target=void\ setText(java.lang.String)
+comment4.text=\n\ setText\ of\ the\ message\n\ \n\ @param\ msg\ \ \ The\ content\ of\ the\ message\n
+numComments=5

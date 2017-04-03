@@ -10,6 +10,7 @@ import greenfoot.*;
 public class PrintReceiptState extends State 
 {
 	final String costMsg = "Your total cost is: ";
+	//The machine prints out a message “Thank You” after printing the receipt or after a timeout of 30 seconds.
 	final String thankyouMsg = "Thank you!";
 
 	int cost = 0;
