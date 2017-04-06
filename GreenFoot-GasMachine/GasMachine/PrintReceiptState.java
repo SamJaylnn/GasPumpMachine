@@ -2,8 +2,8 @@ import greenfoot.*;
 
 /**
  * PrintReceiptState is to print the receipt if:
- * Car Wash option is "Yes" or
- * Car Wash option is "No" and Print Receipt option is "Yes".
+ * Car Wash option is "YES" or
+ * Car Wash option is "NO" and Print Receipt option is "YES".
  *
  */
 

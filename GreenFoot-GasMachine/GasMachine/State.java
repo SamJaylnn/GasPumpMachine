@@ -8,13 +8,15 @@ public class State extends Actor
 	{
 	}
 	
-	public void setMessage(String msg) {
+	public void setMessage(String msg) 
+	{
         MouseInfo mouseinfo = Greenfoot.getMouseInfo();
         int mouseX = mouseinfo.getX();
         int mouseY = mouseinfo.getY();
         
         World world = getWorld();
-        if(message.getWorld() != null) {
+        if(message.getWorld() != null) 
+        {
             world.removeObject(message);
         }
         
