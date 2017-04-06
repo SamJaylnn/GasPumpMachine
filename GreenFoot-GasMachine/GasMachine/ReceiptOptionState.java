@@ -8,8 +8,8 @@ import greenfoot.*;
 public class ReceiptOptionState extends State 
 {
     final String OPTION_MESSAGE = "Would you like to keep your receipt?";
-    final String YES_OPTION = "Yes";
-    final String NO_OPTION = "No";
+    final String YES_OPTION = "YES";
+    final String NO_OPTION = "NO";
     
     private boolean answer;
     
