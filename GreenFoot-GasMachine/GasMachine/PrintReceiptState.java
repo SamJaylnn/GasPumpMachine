@@ -12,7 +12,6 @@ public class PrintReceiptState extends State
     
     final private String thankyouMsg = "Thank you!";
     private String costMsg = "Your total cost is: ";  //needs to append the cost in the end
-    Message message = new Message();
 
     int cost = 0;
 
@@ -43,17 +42,4 @@ public class PrintReceiptState extends State
         System.out.println(thankyouMsg);    // in cmd
     }
     
-    public void setMessage(String msg) {
-        MouseInfo mouseinfo = Greenfoot.getMouseInfo();
-        int mouseX = mouseinfo.getX();
-        int mouseY = mouseinfo.getY();
-        
-        World world = getWorld();
-        if(message.getWorld() != null) {
-            world.removeObject(message);
-        }
-        
-        world.addObject(message, mouseX, mouseY);
-        message.setText(msg);
-    }
 }
