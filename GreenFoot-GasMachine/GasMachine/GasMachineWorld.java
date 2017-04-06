@@ -16,6 +16,28 @@ public class GasMachineWorld extends World
     public GasMachineWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(800, 600, 1); 
+        prepare();
+    }
+    
+    /**
+     * Prepare the world for the start of the program. That is: create the initial
+     * objects and add them to the world.
+     */
+    private void prepare()
+    {
+        FuelType[] types = new FuelType[3]; 
+        types[0] = new FuelType87();
+        types[1] = new FuelType91();
+        types[2] = new FuelType93();
+        int x = 300;
+        int y = 400;
+        for (int i = 0; i < types.length; i++) {
+            addObject(types[i], x, y);
+            x+= 50;
+        }
+        
+        addObject(new Nozzle(), 500, y);
+        
     }
 }
