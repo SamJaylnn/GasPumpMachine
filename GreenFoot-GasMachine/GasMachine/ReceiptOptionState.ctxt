@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ReceiptOptionState
+comment0.text=\n\ If\ Car\ Wash\ option\ is\ "NO",\ Ask\ customers\ if\ they\ want\ their\ receipt.\n\n
+comment1.params=
+comment1.target=ReceiptOptionState()
+comment1.text=\n\ Constructor\ \n
+comment2.params=
+comment2.target=void\ showOption()
+comment2.text=\n\ Provide\ options\ ("YES"\ or\ "NO")\ on\ the\ screenboard.\n
+comment3.params=
+comment3.target=void\ setAnswer()
+comment3.text=\n\ Set\ answer\ according\ to\ customer's\ choice\ (Pressed\ "YES"\ or\ "NO").\n
+comment4.params=
+comment4.target=boolean\ needsReceipt()
+comment4.text=\n\ Call\ this\ function\ to\ check\ if\ the\ customer\ needs\ the\ receipt\ or\ not.\n
+numComments=5
