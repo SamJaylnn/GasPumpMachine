@@ -62,7 +62,7 @@ public class GasMachineWorld extends World
         keyPadMatrix[3][1]=new KeyPadButton0();
         keyPadMatrix[3][2]=new KeyPadButton();
         keyPadMatrix[3][3]=new KeyPadButton();
-        
+        KeyPad keyPad= new KeyPad(keyPadMatrix);
           x = 300;
          y = 200;
          for (int r = 0; r < 4; r++) {
