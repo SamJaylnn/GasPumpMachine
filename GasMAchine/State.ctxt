@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=State
+comment0.text=\n\ Write\ a\ description\ of\ class\ State\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ insertCard()
+comment2.params=
+comment2.target=void\ removeCard()
+comment3.params=
+comment3.target=void\ next()
+comment4.params=
+comment4.target=void\ reject()
+comment5.params=
+comment5.target=void\ help()
+comment6.params=
+comment6.target=void\ cancel()
+comment7.params=
+comment7.target=void\ finishFueling()
+comment8.params=
+comment8.target=void\ finishPrinting()
+numComments=9
