@@ -8,12 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FuelType extends Actor
 {
-    /**
-     * Act - do whatever the FuelType wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    protected GasStation gasStation;
+    protected double unitCost;
+     
+    public FuelType(double price, GasStation gasStation)
+    {
+        unitCost = price;
+        this.gasStation = gasStation; 
+    }
+    
     public void act() 
     {
-        // Add your action code here.
+       if(Greenfoot.mousePressed(this)){
+            if (gasStation.getState()==gasStation.getFuelDispensingState()){
+                gasStation.setFuelType(this.unitCost);
+            }
+            
+            
+        }
     }    
 }

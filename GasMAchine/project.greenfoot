@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.Button.image=bluerock.jpg
 class.Button.superclass=greenfoot.Actor
-class.CarWashOptionState.superclass=
+class.CarWashOptionState.superclass=greenfoot.Actor
 class.CardScannedState.superclass=
 class.CardSlot.image=cardInsert.jpg
 class.CardSlot.superclass=greenfoot.Actor
@@ -54,12 +54,12 @@ dependency9.to=State
 dependency9.type=UsesDependency
 editor.fx.0.height=722
 editor.fx.0.width=800
-editor.fx.0.x=57
-editor.fx.0.y=54
+editor.fx.0.x=450
+editor.fx.0.y=49
 mainWindow.height=648
 mainWindow.width=976
-mainWindow.x=311
-mainWindow.y=45
+mainWindow.x=111
+mainWindow.y=32
 package.numDependencies=10
 package.numTargets=17
 project.charset=UTF-8

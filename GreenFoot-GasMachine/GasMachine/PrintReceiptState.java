@@ -1,5 +1,5 @@
 import greenfoot.*;  
-
+import java.util.Random;
 /**
  * PrintReceiptState is to print the receipt if:
  * Car Wash option is "YES" or
@@ -7,39 +7,36 @@ import greenfoot.*;
  *
  */
 
-public class PrintReceiptState extends State 
+public class PrintReceiptState implements State
 {
-    
-    final private String thankyouMsg = "Thank you!";
-    private String costMsg = "Your total cost is: ";  //needs to append the cost in the end
+    GasStation gasStation;
+    final private String ScreenMsg = "Your receipt is being printed!";
+    private int carWashCode;
 
-    int cost = 0;
 
     /**
      * Constructor 
-     * 
-     * @param cost   total cost on the receipt
      */
-    public PrintReceiptState(int cost) 
+    public PrintReceiptState(GasStation gasStation) 
     {
-        this.cost = cost;
-        costMsg += cost;
+        this.gasStation = gasStation;
     }
 
-    /**
-     * Print out the receipt. 
-     * 
-     */
-    public void print() 
-    {
-        setMessage(costMsg);                // on canvas
-        System.out.println(costMsg);        // in cmd
-        
-        //The machine prints out a message “Thank You” after printing the receipt or after a timeout of 30 seconds.
-        Greenfoot.delay(30);
-        
-        setMessage(thankyouMsg);            // on canvas
-        System.out.println(thankyouMsg);    // in cmd
-    }
+   
     
+     public void setMessage(){
+        gasStation.getScreen().setText(ScreenMsg);
+     }
+     public void insertCreditCard(){}
+     public void dispense(){}
+     
+     public void print(double cost){
+         carWashCode = new Random().nextInt(999999)+100000;
+         World world = gasStation.getCardSlot().getWorld();
+         String msg = "Receipt\nYour cost is : $" + String.valueOf(cost) +"\nYour car wash code is: " 
+         + carWashCode;
+         world.addObject(new Receipt(msg),100,380);
+         
+     }
+   
 }

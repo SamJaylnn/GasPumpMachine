@@ -1,26 +1,18 @@
-import greenfoot.*;
-
-public class State extends Actor 
+/**
+ * Write a description of class state here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public interface State
 {
-	 Message message = new Message();
-	 
-	public void act() 
-	{
-	}
-	
-	public void setMessage(String msg) 
-	{
-        MouseInfo mouseinfo = Greenfoot.getMouseInfo();
-        int mouseX = mouseinfo.getX();
-        int mouseY = mouseinfo.getY();
-        
-        World world = getWorld();
-        if(message.getWorld() != null) 
-        {
-            world.removeObject(message);
-        }
-        
-        world.addObject(message, mouseX, mouseY);
-        message.setText(msg);
-    }
+    public void setMessage();
+    
+    public void insertCreditCard();
+    
+    public void dispense();
+    
+    public void print(double cost);
+    
+    
 }

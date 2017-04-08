@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.Random;
 /**
  * Write a description of class Nozzle here.
  * 
@@ -8,12 +8,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Nozzle extends Actor
 {
-    /**
-     * Act - do whatever the Nozzle wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private GasStation gasStation;
+    
+    public Nozzle(GasStation gasStation)
+    {
+        this.gasStation = gasStation;
+    }
+    
     public void act() 
     {
-        // Add your action code here.
-    }    
+        int mouseX, mouseY;
+        
+        if(Greenfoot.mouseDragEnded(this)) {
+            MouseInfo mouse = Greenfoot.getMouseInfo();  
+            mouseX=mouse.getX();  
+            mouseY=mouse.getY();  
+            this.setLocation(mouseX, mouseY);  
+            //generate random number 1-20 unit of fuel added.
+            gasStation.calculateFuelCost(new Random().nextInt(19)+1);
+            
+            
+        }
+           
+              
+    }  
+            
 }

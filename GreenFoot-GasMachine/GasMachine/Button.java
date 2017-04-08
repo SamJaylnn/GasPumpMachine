@@ -8,12 +8,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Button extends Actor
 {
-    /**
-     * Act - do whatever the Button wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+     protected GasStation gasStation;
+     
+     public Button(GasStation gasStation)
+     {
+        this.gasStation = gasStation; 
+     }
     public void act() 
     {
-        // Add your action code here.
+        if(Greenfoot.mousePressed(this)){
+            if (gasStation.getState()==gasStation.getCardVerifiedState()){
+                if (this.getClass()== ButtonA.class){
+                    gasStation.carWash(true);
+                } else if (this.getClass()==ButtonB.class) {
+                    gasStation.carWash(false);
+                }
+                gasStation.updateScreen();
+            }
+            
+            
+        }
     }    
 }
