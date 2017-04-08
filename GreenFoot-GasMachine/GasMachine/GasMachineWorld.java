@@ -39,30 +39,30 @@ public class GasMachineWorld extends World
         
         addObject(new Nozzle(), 500, y);
         
-       
+         KeyPad keyPad= new KeyPad();
         KeyPadButton[][] keyPadMatrix = new KeyPadButton[4][4];
         
-        keyPadMatrix[0][0]=new KeyPadButton1();
-        keyPadMatrix[0][1]=new KeyPadButton2();
-        keyPadMatrix[0][2]=new KeyPadButton3();
-        keyPadMatrix[0][3]=new KeyPadButtonClear();
+        keyPadMatrix[0][0]=new KeyPadButton1(keyPad);
+        keyPadMatrix[0][1]=new KeyPadButton2(keyPad);
+        keyPadMatrix[0][2]=new KeyPadButton3(keyPad);
+        keyPadMatrix[0][3]=new KeyPadButtonClear(keyPad);
         
         
-        keyPadMatrix[1][0]=new KeyPadButton4();
-        keyPadMatrix[1][1]=new KeyPadButton5();
-        keyPadMatrix[1][2]=new KeyPadButton6();
-        keyPadMatrix[1][3]=new KeyPadButtonEnter();
+        keyPadMatrix[1][0]=new KeyPadButton4(keyPad);
+        keyPadMatrix[1][1]=new KeyPadButton5(keyPad);
+        keyPadMatrix[1][2]=new KeyPadButton6(keyPad);
+        keyPadMatrix[1][3]=new KeyPadButtonEnter(keyPad);
         
-        keyPadMatrix[2][0]=new KeyPadButton7();
-        keyPadMatrix[2][1]=new KeyPadButton8();
-        keyPadMatrix[2][2]=new KeyPadButton9();
-        keyPadMatrix[2][3]=new KeyPadButton();
+        keyPadMatrix[2][0]=new KeyPadButton7(keyPad);
+        keyPadMatrix[2][1]=new KeyPadButton8(keyPad);
+        keyPadMatrix[2][2]=new KeyPadButton9(keyPad);
+        keyPadMatrix[2][3]=new KeyPadButton(keyPad);
         
-        keyPadMatrix[3][0]=new KeyPadButton();
-        keyPadMatrix[3][1]=new KeyPadButton0();
-        keyPadMatrix[3][2]=new KeyPadButton();
-        keyPadMatrix[3][3]=new KeyPadButton();
-        KeyPad keyPad= new KeyPad(keyPadMatrix);
+        keyPadMatrix[3][0]=new KeyPadButton(keyPad);
+        keyPadMatrix[3][1]=new KeyPadButton0(keyPad);
+        keyPadMatrix[3][2]=new KeyPadButton(keyPad);
+        keyPadMatrix[3][3]=new KeyPadButton(keyPad);
+      
           x = 300;
          y = 200;
          for (int r = 0; r < 4; r++) {
@@ -73,6 +73,21 @@ public class GasMachineWorld extends World
         y+=50;
         x=300;
         }
+        
+        
+        PinPlaceHolder phArray[]=new PinPlaceHolder[5];
+        for(int i=0;i<5;i++){
+        phArray[i]=new PinPlaceHolder();
+        }
+        
+        KeyPadScreen keyPadScreen = new KeyPadScreen(phArray);
+        keyPadScreen.xCoordinate=100;
+        keyPadScreen.yCoordinate=100;
+             addObject(keyPadScreen, -1000, -1000000);
+        keyPadScreen.display();
+    
+        
+        keyPad.screen=keyPadScreen;
         
         
     }

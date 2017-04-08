@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class KeyPadButton1 extends KeyPadButton
 {
-      
+       public String getValue(){
+        return "1";
+    }
     
 }

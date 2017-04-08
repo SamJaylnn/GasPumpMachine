@@ -9,11 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class KeyPad extends Actor
 {
     
-    private KeyPadButton buttonMatrix[][]=null;
+   // private KeyPadButton buttonMatrix[][]=null;
+
+     KeyPadScreen screen=null;
     
-    public KeyPad(KeyPadButton[][] buttonMatrix){
-        this.buttonMatrix=buttonMatrix;
-    }
+   
     
     /**
      * Act - do whatever the KeyPad wants to do. This method is called whenever
@@ -23,4 +23,9 @@ public class KeyPad extends Actor
     {
         // Add your action code here.
     }    
+    
+   public void digitEntered(String value){
+    screen.digitEntered(value);
+    
+    }
 }

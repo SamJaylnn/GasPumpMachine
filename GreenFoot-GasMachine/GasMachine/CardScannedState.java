@@ -1,29 +1,28 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Screen here.
+ * Write a description of class CardScannedState here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Screen extends Actor
+public class CardScannedState extends State
 {
-     int xCoordinate;
-     int yCoordinate;
-     int length;
-     int width;
-    
+     KeyPad keyPad;
+     KeyPadScreen screen;
+
     
     
     /**
-     * Act - do whatever the Screen wants to do. This method is called whenever
+     * Act - do whatever the CardScannedState wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
         // Add your action code here.
-    }    
+    } 
     
-    public void display(){
-    }
+   
+    
+    
 }
