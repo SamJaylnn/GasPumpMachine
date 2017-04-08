@@ -10,12 +10,13 @@ public class KeyPadScreen extends Screen
 {
     
     private  PinPlaceHolder phArray[]=null;
-        GreenfootImage gi;
+        GreenfootImage gi= new GreenfootImage(100,100);
          String[] pin= new String[5];
+         int currentPosition=0;
     
     public KeyPadScreen(PinPlaceHolder[] phArray){
         this.phArray=phArray;
-         gi= new GreenfootImage(100,100);
+        
     setImage(gi);
     }
     
@@ -44,23 +45,27 @@ public class KeyPadScreen extends Screen
     
    
         public void digitEntered(String key){
+           if(currentPosition+1 <5){
+            currentPosition=currentPosition+1;
            
-            int digitsEntered = pin.length;
-    pin[digitsEntered+1] = key;
+    pin[currentPosition] = key;
            // gi.clear();
     //gi.setColor( greenfoot.Color.YELLOW );
     //gi.fill();
     gi.setColor(greenfoot.Color.BLACK);
-    gi.drawString(key,xCoordinate + ((digitsEntered+1) * 100) ,yCoordinate+10);
+    System.out.println(key);
+    gi.drawString(key,xCoordinate + ((currentPosition) * 40) ,yCoordinate+10);
+}
     
         }
         
         public void removeDigit(){
-              int digitsEntered = pin.length;
+            if(currentPosition-1 >0){
+             currentPosition=currentPosition-1;
          gi.setColor(greenfoot.Color.BLACK);
-    gi.drawString("",xCoordinate + ((digitsEntered-1) * 100) ,yCoordinate+10);
+    gi.drawString("",xCoordinate + ((currentPosition) * 100) ,yCoordinate+10);
      
-        pin[digitsEntered-1]=null;
-        
+        pin[currentPosition]=null;
+    }
         }
 }

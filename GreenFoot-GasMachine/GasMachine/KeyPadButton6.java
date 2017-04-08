@@ -8,12 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class KeyPadButton6 extends KeyPadButton
 {
-    /**
-     * Act - do whatever the KeyPadButton6 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    public KeyPadButton6(KeyPad keyPad){
+            super(keyPad);
+    this.keyPad=keyPad;
+
+
+}
 }

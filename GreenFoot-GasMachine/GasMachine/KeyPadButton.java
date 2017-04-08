@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class KeyPadButton extends Actor
 {
     
-    KeyPad keyPad=null;
+    public KeyPad keyPad=null;
     
     public KeyPadButton(KeyPad keyPad){
     this.keyPad=keyPad;
@@ -17,6 +17,10 @@ public class KeyPadButton extends Actor
 
 }
     
+public void setKeyPad(KeyPad keyPad){
+        this.keyPad=keyPad;
+}
+
     /**
      * Act - do whatever the KeyPadButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -36,6 +40,6 @@ public class KeyPadButton extends Actor
     
     
     public String getValue(){
-        return null;
+        return "1";
     }
 }
