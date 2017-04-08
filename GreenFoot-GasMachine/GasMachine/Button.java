@@ -26,6 +26,15 @@ public class Button extends Actor
                 gasStation.updateScreen();
             }
             
+            if (gasStation.getState()==gasStation.getRceiptOptionSate()){
+                if (this.getClass()==ButtonC.class) {
+                    gasStation.printReceipt();
+                    gasStation.reStart();
+                } else if (this.getClass()==ButtonD.class) {
+                    gasStation.reStart();
+                }
+            }
+            
             
         }
     }    

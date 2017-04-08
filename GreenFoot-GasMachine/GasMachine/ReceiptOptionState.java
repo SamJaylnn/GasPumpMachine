@@ -13,6 +13,7 @@ public class ReceiptOptionState implements State
     final String YES_OPTION = "Yes";
     final String NO_OPTION = "No";
     
+    
     private boolean answer;
     
     /**
@@ -24,7 +25,12 @@ public class ReceiptOptionState implements State
     }
    
     
-    public void print(double cost) {}
+    public void print(double cost) 
+    {
+        World world = gasStation.getCardSlot().getWorld();
+        String msg = "Receipt\nYour cost is : $" + String.valueOf(cost);
+        world.addObject(new Receipt(msg),100,380);
+    }
     
      public void setMessage()
      {

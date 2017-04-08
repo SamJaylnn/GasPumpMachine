@@ -24,7 +24,7 @@ public class Nozzle extends Actor
             mouseX=mouse.getX();  
             mouseY=mouse.getY();  
             this.setLocation(mouseX, mouseY);  
-            //generate random number 1-20 unit of fuel added.
+            //generate random number 1-20 units of fuel added.
             gasStation.calculateFuelCost(new Random().nextInt(19)+1);
             
             

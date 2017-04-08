@@ -159,4 +159,9 @@ public class GasStation
     {
         currentState.print(fuelCost);
     }
+    
+    public void reStart() {
+        setState(initialState);
+        updateScreen();
+    }
 }
